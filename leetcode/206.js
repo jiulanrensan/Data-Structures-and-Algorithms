@@ -76,15 +76,26 @@ class SingleLinkedList {
   stackReverse (head) {
     const stack = []
     let node = head
-    let newNode = null
+    let headNode = null
+    let temp = null
     while (node) {
-      stack.push(node)
+      stack.push(node.data)
       node = node.next
     }
+    
     while (stack.length) {
-      let temp = new Node(stack.pop())
-      !newNode ? newNode = temp : newNode.next = temp
+      node = new Node(stack.pop())
+      if (!headNode) {
+        headNode = node
+        temp = node
+      } else {
+        // 把temp往后移动
+        temp.next = node
+        temp = temp.next
+      }
     }
+    // 需要返回链表头部
+    return headNode
   }
 }
 
@@ -94,4 +105,6 @@ Array.from({length: 5}).forEach((el, idx) => {
   linkedList.append(idx)
 })
 // linkedList.reverse()
-console.log(linkedList.head);
+// console.log(linkedList.head);
+const head = linkedList.stackReverse(linkedList.head)
+console.log(head);
