@@ -53,3 +53,27 @@ function addVisited (headNode) {
 
 // 3. 快慢指针法
 // 其实就是跑400米的追及问题，只要一直是环状跑，总会相遇
+// 空间复杂度为O(1)
+/**
+ * 
+ * 1 -> 2 -> 3 -> 4 -> 5 -> 1(指向之前节点，表示环)
+ * 遍历步骤：
+ * 1. s -> 1, f -> 2
+ * 2. s -> 2, f -> 4
+ * 3. s -> 3, f -> 1
+ * 4. s -> 4, f -> 3
+ * 5. s -> 5, f -> 5 return
+ */
+
+function fsPointer (headNode) {
+  let fastP = headNode
+  let slowP = headNode.next
+  while (fastP !== slowP) {
+    // 若有终点，快指针会提前到达
+    if (!fastP.next) return false
+    slowP = slowP.next
+    fastP = fast.next.next
+  }
+  // 此时快慢指针指向同一个节点
+  return true
+}
