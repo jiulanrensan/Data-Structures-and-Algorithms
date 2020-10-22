@@ -19,3 +19,9 @@
 * 496: 下一个更大的元素
 * 503: 下一个更大的元素(循环数组) todo
 * 1118
+
+
+## 其他文章
+[一致性哈希算法原理和实现](https://www.jianshu.com/p/92588bbe8a22)
+
+[白话解析：一致性哈希算法 consistent hashing](http://www.zsythink.net/archives/1182)
