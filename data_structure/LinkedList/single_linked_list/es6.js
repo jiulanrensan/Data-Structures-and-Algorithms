@@ -1,6 +1,8 @@
 /**
  * 1. 定义： 链表是由一组节点组成的集合，每个节点包含data与next，data存放当前节点的数据，next存放下一个节点的地址
  * 2. 尾节点next指向null，头节点next指向第一个节点
+ * 
+ * 单链表默认没有头节点，但必须有头指针
  */
 
 /**
@@ -39,7 +41,7 @@ class LinkedList {
     if (!node) {
       this.head = newNode
       newNode.next = null
-      this.showList && this.showLinkedList()
+      // this.showList && this.showLinkedList()
       return
     }
     while (node.next) {
@@ -47,7 +49,7 @@ class LinkedList {
     }
     node.next = newNode
     newNode.next = null
-    this.showList && this.showLinkedList()
+    // this.showList && this.showLinkedList()
     return
   }
 
@@ -59,14 +61,14 @@ class LinkedList {
   insert (item, newVal) {
     const insertItem = this.find(item)
     if (insertItem === this.noResult) {
-      console.log(this.noResult);
+      // console.log(this.noResult);
       return false
     }
     const node = new Node(newVal)
     let nextItem = insertItem.next
     insertItem.next = node
     node.next = nextItem
-    this.showList && this.showLinkedList()
+    // this.showList && this.showLinkedList()
     return true
   }
   
@@ -123,7 +125,7 @@ class LinkedList {
     } else {
       let nextNode = node.next.next
       node.next = nextNode
-      this.showList && this.showLinkedList()
+      // this.showList && this.showLinkedList()
       return true
     }
 
@@ -138,7 +140,7 @@ class LinkedList {
       data = node.data
       next = node.next
     } else {
-      console.log(showData + 'null');
+      // console.log(showData + 'null');
       return
     }
     while (next) {
@@ -157,16 +159,18 @@ const linkedList = new LinkedList()
 // linkedList.showLinkedList()
 
 // 插入链表操作
-let i = 0
-while (i < 5) {
-  console.log(i);
-  linkedList.append(i)
-  i++
-}
+// let i = 0
+// while (i < 5) {
+//   console.log(i);
+//   linkedList.append(i)
+//   i++
+// }
 
 // const findRes = linkedList.find(4)
 
 // linkedList.insert(4, 5)
 
-linkedList.insert(3, 5)
-linkedList.delete(5)
+// linkedList.insert(3, 5)
+// linkedList.delete(5)
+
+module.exports = LinkedList
