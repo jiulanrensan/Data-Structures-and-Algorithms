@@ -14,13 +14,15 @@
  *     this.next = (next===undefined ? null : next)
  * }
  */
+
+// 迭代
 /**
  * @param {ListNode} head 这里的head表示的是头指针
  * @param {number} left
  * @param {number} right
  * @return {ListNode}
  */
- var reverseBetween = function(head, left, right) {
+var reverseBetween = function (head, left, right) {
   if (head.next === null || left === right) return head
   let index = 0
   let prev = null
@@ -56,3 +58,49 @@
   node.next = prev
   return vp.next
 };
+
+
+/****************************************************************************** */
+// 递归
+// 参考 https://labuladong.gitbook.io/algo/mu-lu-ye-1/mu-lu-ye/di-gui-fan-zhuan-lian-biao-de-yi-bu-fen
+
+// 可以先考虑前n个节点的递归
+/**
+ * 
+ * @param {ListNode} head 头指针
+ * @param {number} n 前N个节点，1 <= n <= 链表长度
+ */
+var reverse = function (head, n) {
+  if (head === null || head.next === null || n === 1) return head
+
+  // nextNode表示的是反转前的当前节点的下一个节点
+  // head才是当前节点
+  // node表示的是反转之后的第一个节点
+  let nextNode = head.next
+  let node = reverse(nextNode, n - 1)
+
+  // 进行反转
+  // nextNode.next 指向的是最后一个反转节点的下一个节点，即不反转的第一个节点
+  head.next = nextNode.next
+  nextNode.next = head
+  return node
+}
+
+
+// 然后在考虑原题，m-n部分的递归
+/**
+ * @param {ListNode} head 这里的head表示的是头指针
+ * @param {number} left
+ * @param {number} right
+ * @return {ListNode}
+ */
+var reverseBetween = function (head, left, right) {
+  if (head === null || head.next === null || left === right) return head
+  if (left === 1) {
+    // 如果left是链表的开始，那就是反转前n个节点
+    return reverse(head, right)
+  }
+  // 前进到需要反转的节点
+  head.next = reverseBetween(head.next, left - 1, right)
+  return head
+}
