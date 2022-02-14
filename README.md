@@ -65,7 +65,11 @@ n叉树遍历
 * 25: K 个一组翻转链表 todo
 * 234: 回文链表
 
-## 其他文章
+## 数据结构
+* 146: lru
+* 460: lfu
+
+# 其他文章
 [一致性哈希算法原理和实现](https://www.jianshu.com/p/92588bbe8a22)
 
 [白话解析：一致性哈希算法 consistent hashing](http://www.zsythink.net/archives/1182)
