@@ -5,7 +5,7 @@
 class Heap {
   constructor(arr = []) {
     this.tree = []
-    if (arr.length) this._build(arr)
+    if (arr.length) this._buildDown(arr)
   }
   /**
    * @private
@@ -115,12 +115,22 @@ class Heap {
   }
 
   /**
-   * @desc 初始化堆
+   * @desc 初始化堆，使用insert方式创建堆
    * @param {Array<number>} arr
    */
-  _build (arr) {
+  _buildUp (arr) {
     for (let i = 0; i < arr.length; i++) {
       this.insert(arr[i])
+    }
+  }
+  /**
+   * @desc 采用下滤方式创建堆
+   * @param {Array<number>} arr 
+   */
+  _buildDown (arr) {
+    this.tree = [...arr]
+    for (let i = Math.floor(this.tree.length/2); i >= 0; i--) {
+      this._heapifyDown(i)
     }
   }
 }
