@@ -7,6 +7,10 @@ class Heap {
     this.tree = []
     if (arr.length) this._buildDown(arr)
   }
+  root () {
+    if (!this.tree.length) return null
+    return this.tree[0]
+  }
   /**
    * @private
    * @desc 交换
@@ -160,4 +164,32 @@ class MinHeap extends Heap {
   _compareRule (parentValue, childValue) {
     return parentValue < childValue
   }
+}
+
+/**
+ * @desc 自定义比较规则
+ */
+class CustomHeap extends Heap {
+  /**
+   * 
+   * @param {function} comparator 
+   * @param {Array<number>} arr 
+   */
+  constructor (comparator, arr) {
+    if (typeof comparator !== 'function') {
+      throw new Error('comparator should be Function')
+    }
+    super(arr)
+    this._comparator = comparator
+  }
+  _compareRule (parentNode, childNode) {
+    return this._comparator(parentNode, childNode)
+  }
+}
+
+module.exports = {
+  Heap,
+  MaxHeap,
+  MinHeap,
+  CustomHeap
 }
