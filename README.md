@@ -1,15 +1,18 @@
 # Data-Structures-and-Algorithms
 记录用js学习数据结构与算法的笔记
 
-刷题记录在leetcode目录下
-## 链表相关题目
-* 19: 删除链表倒数第 n 个结点
-* 21: 合并两个有序链表
-* 141: 判断链表中是否有环
-* 206: 反转单链表
-* 876: 求链表中间结点
+# js实现数据结构
+* [二叉树](https://github.com/jiulanrensan/Data-Structures-and-Algorithms/tree/main/data_structure/BinaryTree)
+* [堆](https://github.com/jiulanrensan/Data-Structures-and-Algorithms/tree/main/data_structure/Heap)
+* [LFU](https://github.com/jiulanrensan/Data-Structures-and-Algorithms/tree/main/data_structure/LFU)
+* [LRU](https://github.com/jiulanrensan/Data-Structures-and-Algorithms/tree/main/data_structure/LRU)
+* [链表](https://github.com/jiulanrensan/Data-Structures-and-Algorithms/tree/main/data_structure/LinkedList)
+* [队列](https://github.com/jiulanrensan/Data-Structures-and-Algorithms/tree/main/data_structure/Queue)
+* [优先队列](https://github.com/jiulanrensan/Data-Structures-and-Algorithms/tree/main/data_structure/PriorityQueue)
+* [最大栈](https://github.com/jiulanrensan/Data-Structures-and-Algorithms/tree/main/data_structure/MaximumFrequencyStack)
 
 # 题目分类
+刷题记录在leetcode目录下
 ## 栈
 * 20: 有效的括号
 * 155: 最小栈
@@ -59,8 +62,13 @@ n叉树遍历
 * 450: 删除二叉搜索树中的节点
 * 95
 * 96
+
 ## 链表
-* 206: 反转链表
+* 19: 删除链表倒数第 n 个结点
+* 21: 合并两个有序链表
+* 141: 判断链表中是否有环
+* 206: 反转单链表
+* 876: 求链表中间结点
 * 92: 反转从位置 m 到 n 的链表
 * 25: K 个一组翻转链表 todo
 * 234: 回文链表

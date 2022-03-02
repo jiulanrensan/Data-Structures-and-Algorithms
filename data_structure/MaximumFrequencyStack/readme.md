@@ -63,4 +63,4 @@ class FreqStack{
 ```
 
 # 参考
-- [1][数据结构设计：最大栈](https://labuladong.github.io/algo/2/20/48/)
+- [1][数据结构设计：最大栈](https://labuladong.github.io/algo/2/20/47/)
