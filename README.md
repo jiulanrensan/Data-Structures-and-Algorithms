@@ -73,13 +73,18 @@ n叉树遍历
 * 25: K 个一组翻转链表 todo
 * 234: 回文链表
 
-## 数据结构
+## Heap
+* 295: 数据流的中位数
+
+## 其他数据结构
 * 146: lru
 * 460: lfu
 * 895: 最大栈
 * 355: 设计推特(提交未通过，但是相同的测试用例本地是通过的)
 
 # 其他文章
+[labuladong算法小抄](https://labuladong.github.io/algo/2/)
+
 [一致性哈希算法原理和实现](https://www.jianshu.com/p/92588bbe8a22)
 
 [白话解析：一致性哈希算法 consistent hashing](http://www.zsythink.net/archives/1182)
