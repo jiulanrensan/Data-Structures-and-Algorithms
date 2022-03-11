@@ -20,8 +20,9 @@
 * 844: 比较含退格的字符串
 * 224: 基本计算器
 * 682: 棒球比赛
-* 496: 下一个更大的元素
-* 503: 下一个更大的元素(循环数组)
+* 496: 下一个更大的元素(Stack/NextGreaterNumber)
+* 503: 下一个更大的元素(循环数组)(Stack/NextGreaterNumber)
+* 739: 每日温度(Stack/NextGreaterNumber)
 * 1118
 
 ## dp
