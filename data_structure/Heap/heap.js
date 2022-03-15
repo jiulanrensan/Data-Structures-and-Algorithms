@@ -7,10 +7,10 @@ class Heap {
     this.tree = []
     if (arr.length) this._buildDown(arr)
   }
-  root () {
-    if (!this.tree.length) return null
-    return this.tree[0]
-  }
+  // root () {
+  //   if (!this.tree.length) return null
+  //   return this.tree[0]
+  // }
   /**
    * @private
    * @desc 交换
